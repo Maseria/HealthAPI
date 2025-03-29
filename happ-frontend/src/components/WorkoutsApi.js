@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import WorkoutForm from "./WorkoutsForm";
 import Results from "./Results";
-import './styles.css'; // Import the CSS file
+import './styles.css';
 
 const WorkoutsApi = () => {
   const [workoutPlan, setWorkoutPlan] = useState(null);
 
   const fetchWorkoutPlan = async (formData) => {
     try {
-      const response = await fetch("http://localhost:8000/api/workouts/generate-plan/", {
+      const response = await fetch("http://127.0.0.1:8000/api/workouts/generate-plan/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -18,7 +18,7 @@ const WorkoutsApi = () => {
 
       if (response.ok) {
         const data = await response.json();
-        setWorkoutPlan(data); // Update state with the fetched plan
+        setWorkoutPlan(data); //Update state with the fetched plan
       } else {
         alert("Error generating plan. Please try again.");
       }

@@ -1,5 +1,5 @@
 import {useState} from 'react';
-
+import './nutritionform.css';
 function NutritionForm(){
     const [foodInput, setFoodInput] = useState("");
   const [nutritionData, setNutritionData] = useState(null);
@@ -22,7 +22,7 @@ function NutritionForm(){
       if (data.calories) {
         setNutritionData(data);
         setError(null);
-        setFoodInput(""); // Clear input after successful fetch
+        setFoodInput(""); //Clear input after successfully fetching the info.
       } else {
         setError("No nutrition data found. Try different input.");
       }
@@ -32,10 +32,10 @@ function NutritionForm(){
   };
 
   return (
-    <div className="container mt-5">
+    <div className="nutrition-form-container">
       <div className="row justify-content-center">
         <div className="col-md-6">
-          <div className="card p-4 shadow">
+          <div className="nutrition-form">
             <h3 className="text-center">Food Nutrition Checker</h3>
             <form onSubmit={fetchNutrition}>
               <div className="mb-3">

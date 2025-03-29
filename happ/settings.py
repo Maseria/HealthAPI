@@ -55,11 +55,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'happ.urls'
 
-CORS_ALLOW_ALL_ORIGINS = True
-
 CORS_ALLOWED_ORIGINS = [
     "http://0.0.0.0:3000",  # Replace with your frontend URL
 ]
+
+CORS_ALLOW_ALL_ORIGINS = True
 
 TEMPLATES = [
     {
