@@ -16,7 +16,7 @@ function HealthScoreForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://127.0.0.1:8000/api/health/score", data);
+      const response = await axios.post("http://44.205.205.124:8000/api/health/score", data);
 
       setScore(response.data.health_score);
       setMessage(response.data.message);
