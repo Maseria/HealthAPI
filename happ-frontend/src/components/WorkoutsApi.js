@@ -8,7 +8,7 @@ const WorkoutsApi = () => {
 
   const fetchWorkoutPlan = async (formData) => {
     try {
-      const response = await fetch("http://trainappi.azurewebsites.net/api/workouts/generate-plan/", {
+      const response = await fetch("https://trainappi.azurewebsites.net/api/workouts/generate-plan/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
